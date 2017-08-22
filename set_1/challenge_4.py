@@ -5,9 +5,9 @@ from challenge_3 import english_score, break_single_byte_xor
 
 
 def validate():
-    test = b'Now that the party is jumping\n'
+    test = b"Now that the party is jumping\n"
 
-    with open('4.txt', 'r') as f:
+    with open("4.txt", "r") as f:
         lines = [binascii.unhexlify(line.strip('\n')) for line in f]
 
     idx, key = sorted([(i, break_single_byte_xor(lines[i], english_score)) for i in range(len(lines))], reverse=True,
