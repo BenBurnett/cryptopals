@@ -1,8 +1,10 @@
+#!usr/bin/bash python3
+
 import base64
 import itertools
 
-from challenge_3 import break_single_byte_xor, english_score
-from challenge_5 import xor_decrypt
+from sets.challenge_3 import break_single_byte_xor, english_score
+from sets.challenge_5 import xor_decrypt
 
 
 def hamming_distance(a, b):
@@ -21,7 +23,7 @@ def break_repeating_xor(s, key_len):
 
 
 def validate():
-    with open("6.txt", "rb") as f:
+    with open("../files/6.txt", "rb") as f:
         data = base64.decodebytes(f.read())
 
     key_len_ = min(range(2, 41), key=lambda x: hamming_distance_normalized(data, x))
