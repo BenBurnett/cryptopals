@@ -52,4 +52,4 @@ def validate():
 
     result = strxor.strxor_c(bin_val, key)
 
-    print("Test 2 Result: {}".format("SUCCESS!" if test == result else "FAILURE!"))
+    print("Test 3 Result: {}".format("SUCCESS!" if test == result else "FAILURE!"))
